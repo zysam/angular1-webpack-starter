@@ -15,7 +15,7 @@ var entryJs = isMock ?
     base + 'source/app/index.js';
 var appName = isMock ? 'appTest' : 'app';
 
-var template = jade.compileFile('./source/app/index.jade')({app: appName});
+var template = jade.compileFile('./source/app/index.jade')({ app: appName });
 var plugins = [
     new webpack.ProvidePlugin({
         $: "jquery",
@@ -108,7 +108,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
-                loader : 'file?name=assets/fonts/[name].[ext]?[hash]'
+                loader: 'file?name=assets/fonts/[name].[ext]?[hash]'
             },
             {
                 test: /\.(png|jpg)$/,
@@ -121,14 +121,18 @@ module.exports = {
     devtool: isProd ? 'source-map' : 'eval-source-map',
     devServer: {
         contentBase: base + 'build',
+        hot: true,
         historyApiFallback: true,
         stats: {
-            modules: false,
-            cached: false,
+            modules: true,
+            cached: true,
             colors: true,
             chunk: false
         },
+        inline: true,
+        progress: true,
+        open: true,
         host: '0.0.0.0',
-        port: 8080
+        port: 7070
     }
 };

@@ -9,7 +9,8 @@
   "license": "MIT",
   "main": "source/app/index.js",
   "scripts": {
-    "start": "webpack-dev-server --mock",
+    "start": "webpack-dev-server --progress --inline --mock",
+    "clean": "rm -rf ./build",
     "build": "rm -rf ./build && webpack --progress --mock --prod",
     "test": "rm -rf ./source/test/unit/results && karma start ./karma.config.js",
     "codecov": "cat ./source/test/unit/results/coverage/lcov.info | codecov",

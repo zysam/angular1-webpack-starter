@@ -1,5 +1,5 @@
 const config = {
-    appTitle: 'Aio Angular App'
+    appTitle: 'koala0'
 };
 
 appConfig.$inject = ['RouterHelperProvider'];

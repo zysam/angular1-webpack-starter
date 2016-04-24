@@ -26,9 +26,13 @@ export default angular.module('app', [
     uiRouter,
     ngAnimate,
     ngMessage,
+
+    // common
     layout.name,
     loading.name,
     modal.name,
+
+    // bussiness
     homeRoute.name,
     loginRoute.name,
     dashboardRoute.name,
