@@ -1,23 +1,23 @@
 'use strict';
 
-import gulp     from 'gulp';
-import webpack  from 'webpack';
-import path     from 'path';
-import sync     from 'run-sequence';
-import rename   from 'gulp-rename';
+import gulp from 'gulp';
+import webpack from 'webpack';
+import path from 'path';
+import sync from 'run-sequence';
+import rename from 'gulp-rename';
 import template from 'gulp-template';
-import fs       from 'fs';
-import yargs    from 'yargs';
-import lodash   from 'lodash';
-import gutil    from 'gulp-util';
-import serve    from 'browser-sync';
-import del      from 'del';
+import fs from 'fs';
+import yargs from 'yargs';
+import lodash from 'lodash';
+import gutil from 'gulp-util';
+import serve from 'browser-sync';
+import del from 'del';
 import webpackDevMiddelware from 'webpack-dev-middleware';
 import webpachHotMiddelware from 'webpack-hot-middleware';
-import colorsSupported      from 'supports-color';
-import historyApiFallback   from 'connect-history-api-fallback';
+import colorsSupported from 'supports-color';
+import historyApiFallback from 'connect-history-api-fallback';
 
-let root = 'client';
+const root = 'client';
 
 // helper method for resolving paths
 let resolveToApp = (glob = '') => {
@@ -44,15 +44,15 @@ let paths = {
 
 // use webpack.config.js to build modules
 gulp.task('webpack', ['clean'], (cb) => {
-  const config = require('./webpack.dist.config');
-  config.entry.app = paths.entry;
+  const config = require('./webpack.config');
+  // config.entry.app = paths.entry;
 
   webpack(config, (err, stats) => {
-    if(err)  {
-      throw new gutil.PluginError("webpack", err);
+    if (err) {
+      throw new gutil.PluginError('webpack', err);
     }
 
-    gutil.log("[webpack]", stats.toString({
+    gutil.log('[webpack]', stats.toString({
       colors: colorsSupported,
       chunks: false,
       errorDetails: true
@@ -63,7 +63,7 @@ gulp.task('webpack', ['clean'], (cb) => {
 });
 
 gulp.task('serve', () => {
-  const config = require('./webpack.dev.config');
+  const config = require('./webpack.config');
   config.entry.app = [
     // this modules required to make HRM working
     // it responsible for all this webpack magic
@@ -116,9 +116,9 @@ gulp.task('component', () => {
 
 gulp.task('clean', (cb) => {
   del([paths.dest]).then(function (paths) {
-    gutil.log("[clean]", paths);
+    gutil.log('[clean]', paths);
     cb();
-  })
+  });
 });
 
 gulp.task('default', ['watch']);
