@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 var jade = require('jade');
 var args = require('yargs').argv;
 
@@ -33,7 +35,8 @@ var plugins = [
         templateContent: template,
         inject: 'body',
         chunks: ['app', 'vendor']
-    })
+    }),
+    new OpenBrowserPlugin({url: 'http://localhost:7070'})
 ];
 
 if (isProd) {
@@ -120,17 +123,18 @@ module.exports = {
     debug: !isProd,
     devtool: isProd ? 'source-map' : 'eval-source-map',
     devServer: {
-        contentBase: base + 'build',
+        contentBase: base + 'build/',
+        progress: true,
+        inline: true,
         hot: true,
         historyApiFallback: true,
         stats: {
-            modules: true,
-            cached: true,
+            modules: false,
+            cached: false,
             colors: true,
             chunk: false
         },
-        inline: true,
-        progress: true,
+        // publicPath: "/build/",
         open: true,
         host: '0.0.0.0',
         port: 7070
