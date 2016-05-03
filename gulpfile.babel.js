@@ -64,13 +64,13 @@ gulp.task('webpack', ['clean'], (cb) => {
 
 gulp.task('serve', () => {
   const config = require('./webpack.config');
-  config.entry.app = [
-    // this modules required to make HRM working
-    // it responsible for all this webpack magic
-    'webpack-hot-middleware/client?reload=true',
-    // application entry point
-    paths.entry
-  ];
+  // config.entry.app = [
+  //   // this modules required to make HRM working
+  //   // it responsible for all this webpack magic
+  //   'webpack-hot-middleware/client?reload=true',
+  //   // application entry point
+  //   paths.entry
+  // ];
 
   var compiler = webpack(config);
 
@@ -85,8 +85,8 @@ gulp.task('serve', () => {
           colors: colorsSupported,
           chunks: false,
           modules: false
-        },
-        publicPath: config.output.publicPath
+        }
+        // publicPath: config.output.publicPath
       }),
       webpachHotMiddelware(compiler)
     ]

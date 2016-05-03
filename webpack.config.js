@@ -121,22 +121,22 @@ module.exports = {
     },
     plugins: plugins,
     debug: !isProd,
-    devtool: isProd ? 'source-map' : 'eval-source-map',
-    devServer: {
-        contentBase: base + 'build/',
-        progress: true,
-        inline: true,
-        hot: true,
-        historyApiFallback: true,
-        stats: {
-            modules: false,
-            cached: false,
-            colors: true,
-            chunk: false
-        },
-        // publicPath: "/build/",
-        open: true,
-        host: '0.0.0.0',
-        port: 7070
-    }
+    devtool: isProd ? 'source-map' : 'eval-source-map'
+    // devServer: {
+    //     contentBase: base + 'build/',
+    //     progress: true,
+    //     inline: true,
+    //     hot: true,
+    //     historyApiFallback: true,
+    //     stats: {
+    //         modules: false,
+    //         cached: false,
+    //         colors: true,
+    //         chunk: false
+    //     },
+    //     // publicPath: "/build/",
+    //     open: true,
+    //     host: '0.0.0.0',
+    //     port: 7070
+    // }
 };
