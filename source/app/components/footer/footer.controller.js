@@ -1,9 +1,9 @@
 class FooterController {
-    constructor () {
-        this.year = (new Date()).getFullYear();
-    }
+  constructor () {
+    this.year = (new Date()).getFullYear()
+  }
 }
 
-FooterController.$inject = [];
+FooterController.$inject = []
 
-export default FooterController;
+export default FooterController

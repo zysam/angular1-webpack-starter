@@ -1,25 +1,25 @@
 class DashboardController {
-    constructor (UserAPI) {
-        Object.assign(this, {UserAPI});
+  constructor (UserAPI) {
+    Object.assign(this, {UserAPI})
 
-        this.colors = ['indigo', 'red', 'pink'];
+    this.colors = ['indigo', 'red', 'pink']
 
-        const userInfo = this.UserAPI.getUserInfo();
-        this.welcomeMessage = `Welcome ${userInfo.name}!`;
-        this._getProductsSummary();
-    }
+    const userInfo = this.UserAPI.getUserInfo()
+    this.welcomeMessage = `Welcome ${userInfo.name}!`
+    this._getProductsSummary()
+  }
 
-    _getProductsSummary () {
-        this.UserAPI.getProductSummary()
-            .then((data) => {
-                this.products = data;
-                this.products.forEach((product) => {
-                    product.link = `root.layout.${product.name}`;
-                });
-            });
-    }
+  _getProductsSummary () {
+    this.UserAPI.getProductSummary()
+      .then((data) => {
+        this.products = data
+        this.products.forEach((product) => {
+          product.link = `root.layout.${product.name}`
+        })
+      })
+  }
 }
 
-DashboardController.$inject = ['UserAPI'];
+DashboardController.$inject = ['UserAPI']
 
-export default DashboardController;
+export default DashboardController

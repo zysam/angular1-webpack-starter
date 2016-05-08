@@ -1,18 +1,18 @@
 function SelectInitDirective () {
-    return {
-        restrict: 'A',
-        link
-    };
+  return {
+    restrict: 'A',
+    link
+  }
 
-    function link (scope, element, attrs) {
-        scope.$watch(attrs.ngModel, initSelect);
-        function initSelect () {
-            element.siblings('.caret').remove();
-            element.material_select();
-        }
+  function link (scope, element, attrs) {
+    scope.$watch(attrs.ngModel, initSelect)
+    function initSelect () {
+      element.siblings('.caret').remove()
+      element.material_select()
     }
+  }
 }
 
-SelectInitDirective.$inject = [];
+SelectInitDirective.$inject = []
 
-export default SelectInitDirective;
+export default SelectInitDirective

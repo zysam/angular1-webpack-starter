@@ -1,15 +1,15 @@
-import exceptionHandlerDecorator from './exception-handler.decorator';
+import exceptionHandlerDecorator from './exception-handler.decorator'
 
-appProductionConfig.$inject = ['$logProvider', '$compileProvider'];
+appProductionConfig.$inject = ['$logProvider', '$compileProvider']
 function appProductionConfig ($logProvider, $compileProvider) {
-    $logProvider.debugEnabled(false);
-    $compileProvider.debugInfoEnabled(false);
+  $logProvider.debugEnabled(false)
+  $compileProvider.debugInfoEnabled(false)
 }
 
-exceptionHandlerConfig.$inject = ['$provide'];
+exceptionHandlerConfig.$inject = ['$provide']
 function exceptionHandlerConfig ($provide) {
-    // Use decorator to extend the original $exceptionHandler:
-    $provide.decorator('$exceptionHandler', exceptionHandlerDecorator);
+  // Use decorator to extend the original $exceptionHandler:
+  $provide.decorator('$exceptionHandler', exceptionHandlerDecorator)
 }
 
-export {appProductionConfig, exceptionHandlerConfig};
+export { appProductionConfig, exceptionHandlerConfig }

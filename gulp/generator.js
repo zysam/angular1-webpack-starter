@@ -8,7 +8,7 @@ const $ = require('gulp-load-plugins')({lazy: true})
 const root = 'client'
 const paths = {
   blankComponetTemplates: path.join(__dirname, 'generator', 'component/**/*.**'),
-  blankPageTemplates: path.join(__dirname, 'generator', 'pages/**/*.**')
+  blankPageTemplates: path.join(__dirname, 'generator', 'page/**/*.**')
 }
 gulp.task('component', () => {
   generate('component')

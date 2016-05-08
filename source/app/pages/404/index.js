@@ -1,3 +1,3 @@
-import angular from 'angular';
+import angular from 'angular'
 
-export default angular.module('app.pages.404', []);
+export default angular.module('app.pages.404', [])

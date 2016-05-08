@@ -1,8 +1,8 @@
-import angular from 'angular';
+import angular from 'angular'
 
-import BannerDirective from './banner.directive';
+import BannerDirective from './banner.directive'
 
 const banner = angular.module('app.components.banner', [])
-    .directive(`aioBanner`, BannerDirective);
+  .directive(`aioBanner`, BannerDirective)
 
-export default banner;
+export default banner

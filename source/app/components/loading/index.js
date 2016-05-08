@@ -1,12 +1,12 @@
-import angular from 'angular';
-import ngLoadingBar from 'angular-loading-bar';
+import angular from 'angular'
+import ngLoadingBar from 'angular-loading-bar'
 
-import appLoadingConfig from './config';
-import './loading.styl';
+import appLoadingConfig from './config'
+import './loading.styl'
 
 const loading = angular.module('app.components.loading', [
-    ngLoadingBar
+  ngLoadingBar
 ])
-    .config(appLoadingConfig);
+  .config(appLoadingConfig)
 
-export default loading;
+export default loading

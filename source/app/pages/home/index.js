@@ -1,7 +1,7 @@
-import angular from 'angular';
+import angular from 'angular'
 
-import homeHero from '../../components/home-hero';
+import homeHero from '../../components/home-hero'
 
 export default angular.module('app.pages.home', [
-    homeHero.name
-]);
+  homeHero.name
+])

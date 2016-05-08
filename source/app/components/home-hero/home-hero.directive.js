@@ -1,15 +1,15 @@
-import homeHeroHtml from './home-hero.jade';
+import homeHeroHtml from './home-hero.jade'
 
 function HomeHeroDirective () {
-    return {
-        restrict: 'AE',
-        scope: {
-            getStartedLink: '@'
-        },
-        template: homeHeroHtml
-    };
+  return {
+    restrict: 'AE',
+    scope: {
+      getStartedLink: '@'
+    },
+    template: homeHeroHtml
+  }
 }
 
-HomeHeroDirective.$inject = [];
+HomeHeroDirective.$inject = []
 
-export default HomeHeroDirective;
+export default HomeHeroDirective

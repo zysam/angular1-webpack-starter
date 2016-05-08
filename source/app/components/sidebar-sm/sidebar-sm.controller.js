@@ -1,17 +1,17 @@
 class SidebarSmController {
-    constructor ($rootScope) {
-        Object.assign(this, {$rootScope});
-    }
+  constructor ($rootScope) {
+    Object.assign(this, {$rootScope})
+  }
 
-    toggleSidebar (flag) {
-        if (typeof flag === 'undefined') {
-            this.$rootScope.showSidebar = !this.$rootScope.showSidebar;
-        } else {
-            this.$rootScope.showSidebar = flag;
-        }
+  toggleSidebar (flag) {
+    if (typeof flag === 'undefined') {
+      this.$rootScope.showSidebar = !this.$rootScope.showSidebar
+    } else {
+      this.$rootScope.showSidebar = flag
     }
+  }
 }
 
-SidebarSmController.$inject = ['$rootScope'];
+SidebarSmController.$inject = ['$rootScope']
 
-export default SidebarSmController;
+export default SidebarSmController

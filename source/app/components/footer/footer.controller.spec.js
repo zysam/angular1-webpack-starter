@@ -1,12 +1,12 @@
-import FooterController from './footer.controller';
+import FooterController from './footer.controller'
 
 describe('Footer Controller', () => {
-    let controller;
-    beforeEach(() => {
-        controller = new FooterController();
-    });
+  let controller
+  beforeEach(() => {
+    controller = new FooterController()
+  })
 
-    it('should have correct year', () => {
-        expect(controller.year).toEqual(2015);
-    });
-});
+  it('should have correct year', () => {
+    expect(controller.year).toEqual(2015)
+  })
+})

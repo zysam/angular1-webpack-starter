@@ -1,12 +1,12 @@
-import angular from 'angular';
+import angular from 'angular'
 
-import SidebarSmController from './sidebar-sm.controller';
-import sidebarSmHtml from './sidebar-sm.jade';
-import common from '../_common';
+import SidebarSmController from './sidebar-sm.controller'
+import sidebarSmHtml from './sidebar-sm.jade'
+import common from '../_common'
 
 const sidebarSm = angular.module('app.components.sidebarSm', [
-    common.name
+  common.name
 ])
-    .controller(SidebarSmController.name, SidebarSmController);
+  .controller(SidebarSmController.name, SidebarSmController)
 
-export default {sidebarSm, sidebarSmHtml, SidebarSmController};
+export default {sidebarSm, sidebarSmHtml, SidebarSmController}

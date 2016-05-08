@@ -1,14 +1,14 @@
 function DropdownInitDirective () {
-    return {
-        restrict: 'A',
-        link
-    };
+  return {
+    restrict: 'A',
+    link
+  }
 
-    function link (scope, element) {
-        element.dropdown();
-    }
+  function link (scope, element) {
+    element.dropdown()
+  }
 }
 
-DropdownInitDirective.$inject = [];
+DropdownInitDirective.$inject = []
 
-export default DropdownInitDirective;
+export default DropdownInitDirective

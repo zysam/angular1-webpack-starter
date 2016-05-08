@@ -1,8 +1,8 @@
-import angular from 'angular';
+import angular from 'angular'
 
-import SquareMenuDirective from './square-menu.directive';
+import SquareMenuDirective from './square-menu.directive'
 
 const squareMenu = angular.module('app.components.squareMenu', [])
-    .directive('aioSquareMenu', SquareMenuDirective);
+  .directive('aioSquareMenu', SquareMenuDirective)
 
-export default squareMenu;
+export default squareMenu

@@ -1,7 +1,7 @@
 class PhoneTableController {
-    constructor () {}
+  constructor () {}
 }
 
-PhoneTableController.$inject = [];
+PhoneTableController.$inject = []
 
-export default PhoneTableController;
+export default PhoneTableController

@@ -1,15 +1,15 @@
-import bannerHtml from './banner.jade';
+import bannerHtml from './banner.jade'
 
 function BannerDirective () {
-    return {
-        restrict: 'AE',
-        scope: {
-            text: '='
-        },
-        template: bannerHtml
-    };
+  return {
+    restrict: 'AE',
+    scope: {
+      text: '='
+    },
+    template: bannerHtml
+  }
 }
 
-BannerDirective.$inject = [];
+BannerDirective.$inject = []
 
-export default BannerDirective;
+export default BannerDirective
